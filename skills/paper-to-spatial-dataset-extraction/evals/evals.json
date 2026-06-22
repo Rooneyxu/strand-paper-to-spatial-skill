@@ -1,0 +1,25 @@
+{
+  "skill_name": "paper-to-spatial-dataset-extraction",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a DOI and a 10x Genomics Xenium dataset page for a human pancreas spatial transcriptomics dataset. Please extract a STRAND-compatible metadata table and an evidence report. I do not have an internal dataset number or an existing workbook row.",
+      "expected_output": "Creates final_metadata.xlsx, final_metadata.tsv, extraction_report.md, and internal/qc_parameters.tsv. The No. column is blank unless the user supplies a registry ID. The report uses source title, DOI, sample names, data links, and QC parameters as identifiers instead of internal DatasetN-style labels."
+    },
+    {
+      "id": 2,
+      "prompt": "Here is a paper PDF and a Figshare collection for a Bento MERFISH or seqFISH dataset. Build the metadata package from the paper and repository pages first, then make a download plan for h5ad files if counts or boundaries are unresolved. I only know the article and data links, not the STRAND dataset number.",
+      "expected_output": "Does not ask for a dataset number. Produces source-derived candidate rows, internal/download_plan.md before any large download, internal/unresolved_fields.tsv for missing fields, and keeps No. blank by default."
+    },
+    {
+      "id": 3,
+      "prompt": "Use this paper URL and dataset landing page to curate a subcellular spatial dataset. Apply my QC profile if I provide it, including noise feature patterns, min_genes, min_cells, nc_ratio, and mitochondrial gene checks. I want the final spreadsheet plus an explanation of what was unresolved.",
+      "expected_output": "Writes internal/qc_parameters.tsv with one row per QC step, prints the QC Parameters Used section in extraction_report.md, keeps curation_notes concise, and does not rely on regression truth or internal pilot dataset numbers."
+    },
+    {
+      "id": 4,
+      "prompt": "I do not have a paper yet. Search for pancreas subcellular-resolution spatial transcriptomics datasets, choose the best candidate if confidence is high, then prepare the normal STRAND metadata extraction workflow.",
+      "expected_output": "Generates targeted upstream queries, uses an available paper-lookup or paper-search route when possible, writes internal/upstream_paper_search.json with candidates and selection confidence, asks for user confirmation when ambiguous, and does not fill final count or boundary metadata from search snippets alone."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "FINISH": "",
+    "No.": "",
+    "Dataset": "Systematic discovery of subcellular RNA patterns in the gut epithelium",
+    "Category": "tissue",
+    "Technology": "MERFISH",
+    "Species": "-",
+    "Organ": "Gut",
+    "Tissue": "gut epithelium",
+    "Cell Type": "-",
+    "Group": "-",
+    "Sample Name": "-",
+    "No.batch": "-",
+    "Raw No.cells": "-",
+    "No.genes": "-",
+    "cellclass": "-",
+    "celltype（minor）": "-",
+    "Cell boundary": "-",
+    "Nuclei boundary": "-",
+    "Filtered No.cells/nuclei": "-",
+    "cells": "-",
+    "genes": "-",
+    "No.transcripts": "-",
+    "median transcripts": "-",
+    "No.NucleiBoundary": "-",
+    "Data link": "https://doi.org/10.1186/s13059-025-03786-1",
+    "suggested_finish_status": "needs_article_and_repository_extraction",
+    "usability_status": "needs_article_data_availability",
+    "review_required": "true",
+    "curation_notes": "Search-first demo row. Upstream paper lookup identified a candidate article, but Data availability, repository files, boundary geometry, sample structure, and count fields still require downstream extraction."
+  }
+]

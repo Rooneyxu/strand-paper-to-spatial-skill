@@ -1,0 +1,6 @@
+field	reason	next_action
+Species	Search metadata did not verify species.	Read article methods and Data availability.
+Cell boundary	Search metadata cannot prove reusable geometry.	Inspect repository files or manifests.
+Nuclei boundary	Search metadata cannot prove reusable nucleus geometry.	Inspect repository files or manifests.
+Count fields	Search metadata cannot provide final STRAND count conventions.	Run source extraction and approved file validators.
+Data repository	DOI identified, repository not yet verified.	Read article Data availability and dataset landing pages.

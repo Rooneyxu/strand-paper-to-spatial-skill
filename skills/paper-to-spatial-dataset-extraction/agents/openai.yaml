@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spatial Dataset Extraction"
+  short_description: "Search or extract STRAND metadata with evidence"
+  default_prompt: "Use $paper-to-spatial-dataset-extraction to search for candidate subcellular spatial datasets when needed, then turn a paper PDF, DOI/article URL, repository page, or dataset landing page into final_metadata.xlsx, final_metadata.tsv, and extraction_report.md."

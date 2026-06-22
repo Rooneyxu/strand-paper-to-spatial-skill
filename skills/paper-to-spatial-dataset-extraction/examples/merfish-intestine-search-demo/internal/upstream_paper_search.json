@@ -1,0 +1,98 @@
+{
+  "user_query": "small-intestine MERFISH subcellular-resolution spatial transcriptomics dataset",
+  "search_was_needed": true,
+  "search_tools_available": [
+    "bundled optional paper-lookup",
+    "paper-search MCP fallback",
+    "biomcp fallback",
+    "web-search fallback"
+  ],
+  "tool_route_used": "bundled optional paper-lookup",
+  "queries": [
+    {
+      "query": "(\"small intestine\" OR intestine OR intestinal) MERFISH \"spatial transcriptomics\"",
+      "purpose": "Find biomedical paper candidates for small-intestine or gut MERFISH spatial transcriptomics.",
+      "tool": "paper-lookup / PubMed"
+    },
+    {
+      "query": "\"small intestine\" MERFISH spatial transcriptomics",
+      "purpose": "Cross-check broad scholarly index candidates and DOI/PDF metadata.",
+      "tool": "paper-lookup / OpenAlex"
+    },
+    {
+      "query": "small intestine MERFISH spatial transcriptomics",
+      "purpose": "Semantic Scholar relevance search; failed due public shared-pool rate limit.",
+      "tool": "paper-lookup / Semantic Scholar"
+    }
+  ],
+  "databases_queried": [
+    {
+      "tool": "paper-lookup",
+      "database": "PubMed",
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi and esummary.fcgi",
+      "status": "ok"
+    },
+    {
+      "tool": "paper-lookup",
+      "database": "OpenAlex",
+      "endpoint": "https://api.openalex.org/works",
+      "status": "ok"
+    },
+    {
+      "tool": "paper-lookup",
+      "database": "Semantic Scholar",
+      "endpoint": "https://api.semanticscholar.org/graph/v1/paper/search",
+      "status": "rate_limited_429"
+    }
+  ],
+  "candidate_papers": [
+    {
+      "title": "Systematic discovery of subcellular RNA patterns in the gut epithelium",
+      "doi": "10.1186/s13059-025-03786-1",
+      "year": "2025",
+      "journal": "Genome Biology",
+      "article_url": "https://doi.org/10.1186/s13059-025-03786-1",
+      "oa_pdf_url": "https://genomebiology.biomedcentral.com/counter/pdf/10.1186/s13059-025-03786-1",
+      "data_links": [],
+      "technology_hints": [
+        "MERFISH"
+      ],
+      "species_hints": [],
+      "organ_tissue_hints": [
+        "gut epithelium",
+        "intestine"
+      ],
+      "subcellular_relevance": "yes",
+      "repository_evidence": "PubMed and OpenAlex both identify this as a Genome Biology article matching MERFISH/intestine/spatial transcriptomics terms. Data availability still needs downstream article-page extraction.",
+      "rejection_reason": ""
+    },
+    {
+      "title": "Imaging the Intestinal Transcriptome With Multiplexed Error-Robust Fluorescence In Situ Hybridization (MERFISH)",
+      "doi": "10.1002/cpz1.70111",
+      "year": "2025",
+      "journal": "Current Protocols",
+      "article_url": "https://doi.org/10.1002/cpz1.70111",
+      "oa_pdf_url": "",
+      "data_links": [],
+      "technology_hints": [
+        "MERFISH"
+      ],
+      "species_hints": [],
+      "organ_tissue_hints": [
+        "intestinal transcriptome"
+      ],
+      "subcellular_relevance": "maybe",
+      "repository_evidence": "PubMed result is method/protocol-like, useful for method context but not clearly a reusable dataset source.",
+      "rejection_reason": "Down-ranked because it appears to be a protocol article, not the primary dataset target."
+    }
+  ],
+  "selected_paper": {
+    "title": "Systematic discovery of subcellular RNA patterns in the gut epithelium",
+    "doi": "10.1186/s13059-025-03786-1",
+    "article_url": "https://doi.org/10.1186/s13059-025-03786-1",
+    "data_links": []
+  },
+  "selection_confidence": "medium",
+  "selection_reason": "Best match returned by both PubMed and OpenAlex for MERFISH/intestine/subcellular spatial terms. Confidence remains medium because paper-lookup metadata did not expose repository data links; downstream article-page/Data availability extraction is required before metadata filling.",
+  "needs_user_confirmation": true
+}

@@ -1,0 +1,2 @@
+dataset	sample	step	parameter	value	applied	evidence_source	effect_on_counts	notes
+Systematic discovery of subcellular RNA patterns in the gut epithelium	all	qc_parameter_profile	not_applicable_search_only	-	not_applied	internal/upstream_paper_search.json	no count fields filled	Search-only demo; QC starts after repository/file evidence exists.
