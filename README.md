@@ -22,21 +22,31 @@ skills/
 
 ## Install
 
-Copy the skills into a Codex skills directory, or install from the GitHub repository path after publishing:
+The normal installation method is to copy the skill folders into a Codex skills directory.
+
+```bash
+git clone https://github.com/Rooneyxu/strand-paper-to-spatial-skill.git
+cd strand-paper-to-spatial-skill
+
+mkdir -p ~/.codex/skills
+cp -R skills/paper-to-spatial-dataset-extraction ~/.codex/skills/
+
+# Optional: upstream paper search helper
+cp -R skills/paper-lookup ~/.codex/skills/
+```
+
+Restart Codex or open a new session after copying so the skill list is refreshed.
+
+If you use a shared skill directory instead of the default Codex home, copy the same folders to that directory, for example `~/.agents/skills/`.
+
+The GitHub installer is optional. It is useful for scripted setup, but not required:
 
 ```bash
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo OWNER/strand-paper-to-spatial-skill \
+  --repo Rooneyxu/strand-paper-to-spatial-skill \
   --path skills/paper-to-spatial-dataset-extraction \
   --dest ~/.codex/skills
-
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo OWNER/strand-paper-to-spatial-skill \
-  --path skills/paper-lookup \
-  --dest ~/.codex/skills
 ```
-
-Replace `OWNER` with the GitHub account or organization that hosts this repository.
 
 ## Usage
 
