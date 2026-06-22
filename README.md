@@ -2,6 +2,8 @@
 
 Codex Skill package for agent-based collection and curation of subcellular-resolution spatial transcriptomics dataset metadata.
 
+![Agent-based data collection and curation workflow](assets/agent-based-data-collection-and-curation.png)
+
 The main skill turns a paper PDF, DOI, article URL, dataset landing page, or optional topic-search request into STRAND-style metadata outputs:
 
 - `final_metadata.xlsx`
